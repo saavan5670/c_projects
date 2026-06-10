@@ -17,7 +17,7 @@ else if(marks >= 90 && marks <= 100) {
     printf("A+ \n");
 }
 else {
-    printf("worng marks");
+    printf("wrong marks");
 }
 return 0;
 
