@@ -1,22 +1,17 @@
 #include<stdio.h>
 
-int calcPercentage(int science, int math, int sanskrit);
+int fact(int n);
 
 int main() {
-    int science, math, sanskrit;
-    printf("Enter marks for Science: ");
-    scanf("%d", &science);
-    printf("Enter marks for Math: ");
-    scanf("%d", &math);
-    printf("Enter marks for Sanskrit: ");
-    scanf("%d", &sanskrit);
-
-    int percentage = calcPercentage(science, math, sanskrit);
-    printf("The percentage is: %d%%\n", percentage);
-
+    printf("factorial is : %d", fact(5));
     return 0;
 }
-
-int calcPercentage(int science, int math, int sanskrit) {
-    return ((science + math + sanskrit) / 3);
+int fact(int n) {
+    if(n == 0){
+        return 1;
+    }
+    int factNm1 = fact(n - 1);
+    int factNm = factNm1 * n;
+    return factNm;
 }
+
