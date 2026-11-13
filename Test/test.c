@@ -1,17 +1,13 @@
 #include<stdio.h>
 
-int fact(int n);
-
 int main() {
-    printf("factorial is : %d", fact(5));
+   int text;
+   printf("enter text :");
+   scanf("%d", &text);
+    
+   for(int i=1; i<=10; i++){
+    printf("%d\n " text);
+   }
+
     return 0;
 }
-int fact(int n) {
-    if(n == 0){
-        return 1;
-    }
-    int factNm1 = fact(n - 1);
-    int factNm = factNm1 * n;
-    return factNm;
-}
-
